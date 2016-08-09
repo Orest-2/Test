@@ -8,9 +8,10 @@ import org.testng.annotations.Test;
  * Created by Орест on 21.07.2016.
  */
 public class NegativeTestClass {
+    String driver_patch = "./lib/chromedriver.exe";
     @Test
     public void Facebook () {
-        System.setProperty("webdriver.chrome.driver","C://Users//Орест//IdeaProjects//untitled//lib//chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", driver_patch);
         WebDriver driver=new ChromeDriver();
         driver.get("https://www.facebook.com/");
         driver.findElement(By.id("email")).clear();
@@ -25,7 +26,7 @@ public class NegativeTestClass {
     }
     @Test
     public void Facebook2 () {
-        System.setProperty("webdriver.chrome.driver", "C://Users//Орест//IdeaProjects//untitled//lib//chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", driver_patch);
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.facebook.com/");
         driver.findElement(By.id("email")).clear();

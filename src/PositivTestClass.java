@@ -7,9 +7,11 @@ import org.testng.annotations.Test;
  * Created by Орест on 28.07.2016.
  */
 public class PositivTestClass {
+    String driver_patch = "./lib/chromedriver.exe";
+
     @Test
     public void LogIn () {
-        System.setProperty("webdriver.chrome.driver", "C://Users//Орест//IdeaProjects//untitled//lib//chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", driver_patch);
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.facebook.com");
         driver.findElement(By.id("email")).clear();
@@ -21,7 +23,7 @@ public class PositivTestClass {
     }
     @Test
     public void LogOut () throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "C://Users//Орест//IdeaProjects//untitled//lib//chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", driver_patch);
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.facebook.com");
         driver.findElement(By.id("email")).clear();
